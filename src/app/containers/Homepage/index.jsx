@@ -5,6 +5,7 @@ import tw from "twin.macro";
 
 //Import components
 import { Navbar } from '../../components/navbar';
+import { Form } from './form';
 
 
 //style for Homepage by default switching after if is needed
@@ -22,6 +23,7 @@ export function HomePage() {
     return (
         <PageContainer>
             <Navbar />
+            <Form />
         </PageContainer>
     );
 };
