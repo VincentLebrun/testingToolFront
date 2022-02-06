@@ -21,10 +21,9 @@ const Title = styled.h2`
   `};
 `;
 export function Form() {
-    return (
-        <InfoContainer>
-            <Title>Toto</Title>
-
-        </InfoContainer>
-    )
+  return (
+    <InfoContainer>
+      <Title>TATA</Title>
+    </InfoContainer>
+  )
 };

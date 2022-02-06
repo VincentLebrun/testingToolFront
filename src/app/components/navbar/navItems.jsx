@@ -12,7 +12,8 @@ ${tw`
 `;
 
 const NavItem = styled.ul`
-${`
+${tw`
+  mr-2
   text-sm
   text-black
 `}
@@ -22,10 +23,10 @@ export function NavItems() {
     return (
         <ListContainer>
             <NavItem>
-                <a href="form">Accueil</a>
+                <a href="/">Accueil</a>
             </NavItem>
             <NavItem>
-                <a href="form">Projets</a>
+                <a href="project">Projets</a>
             </NavItem>
             <NavItem>
                 <a href="form">Seconnecter</a>

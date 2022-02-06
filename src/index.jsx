@@ -1,16 +1,23 @@
+//import tool
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-import { Form } from "./app/containers/Homepage/form";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+//import component
+import { Form } from "./app/components/form";
+import { Project } from "./app/components/project";
+import { Navbar } from "./app/components/navbar";
 const Root = () => (
   <Router>
+    <Navbar />
     <Switch>
+
       <Route exact path="/" component={App} />
-      <Route path="form" component={Form} />
+      <Route path="/form" component={Form} />
+      <Route path="/project" component={Project} />
     </Switch>
   </Router>
 );

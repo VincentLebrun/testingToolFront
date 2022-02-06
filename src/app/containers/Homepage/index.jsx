@@ -3,9 +3,7 @@ import React from 'react';
 import styled from "styled-components";
 import tw from "twin.macro";
 
-//Import components
-import { Navbar } from '../../components/navbar';
-import { Form } from './form';
+
 
 
 //style for Homepage by default switching after if is needed
@@ -19,11 +17,14 @@ const PageContainer = styled.div`
   overflow-x-hidden
   `}
 `;
+const Text = styled.p``
+
+
 export function HomePage() {
     return (
         <PageContainer>
-            <Navbar />
-            <Form />
+            <Text>Hello</Text>
+
         </PageContainer>
     );
 };
