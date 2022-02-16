@@ -5,7 +5,6 @@ import tw from "twin.macro";
 //Style
 const InfoContainer = styled.div`
   ${tw`
-    md:w-1/2
     flex
     flex-col
     md:ml-6
@@ -20,9 +19,35 @@ const Title = styled.h2`
     font-extrabold
   `};
 `;
+const FormContainer = styled.div`
+${tw`
+  flex
+  flex-col
+  items-center
+
+  
+`}
+`
+const FormInput = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  box-shadow :5px 5px 5px 4px rgba(0, 0, 0, 0.2) ;
+  
+${tw`
+  border-b-black
+  rounded-3xl
+ 
+`}
+`
+
 export function Form() {
   return (
     <InfoContainer>
+      <FormContainer>
+        <FormInput defaultValue={"Nom"} />
+        <FormInput defaultValue={"Prénom"} />
+        <FormInput defaultValue={"Mail"} />
+      </FormContainer>
       <Title>TATA</Title>
     </InfoContainer>
   )

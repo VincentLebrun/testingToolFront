@@ -26,10 +26,10 @@ export function NavItems() {
                 <a href="/">Accueil</a>
             </NavItem>
             <NavItem>
-                <a href="project">Projets</a>
+                <a href="/project">Projets</a>
             </NavItem>
             <NavItem>
-                <a href="form">Seconnecter</a>
+                <a href="/form">Seconnecter</a>
             </NavItem>
         </ListContainer>
     )

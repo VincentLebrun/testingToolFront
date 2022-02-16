@@ -4,8 +4,7 @@ import tw from "twin.macro";
 
 //Import Components
 import { HomePage } from "./app/containers/Homepage";
-import { Form } from "./app/components/form";
-// import { Navbar } from "./app/components/navbar";
+
 //style for container
 const AppContainer = styled.div`
   ${tw`
@@ -20,7 +19,6 @@ function App() {
   return (
     <AppContainer>
       <HomePage />
-      <Form />
     </AppContainer>
   );
 }

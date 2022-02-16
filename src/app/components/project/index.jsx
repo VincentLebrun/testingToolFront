@@ -10,11 +10,13 @@ lg:text-5xl
 text-black
 font-extrabold
 `}`;
+
 export function Project() {
 
 
     return (
         <TextContainer>
+
             <Text>Projets</Text>
         </TextContainer>
     );
