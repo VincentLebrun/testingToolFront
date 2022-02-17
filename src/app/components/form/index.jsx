@@ -1,6 +1,9 @@
 //import tools
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import axios from "axios"
+
 
 //Style
 const InfoContainer = styled.div`
@@ -41,9 +44,31 @@ ${tw`
 `
 
 export function Form() {
+  const [data, setData] = useState([])
+
+
+
+
+
+
+  useEffect(() => {
+    const apiUrl = "http://localhost:4000/user"
+    axios.get(apiUrl).then(res => {
+      const all = res.data;
+      setData(all)
+    })
+
+
+  }, [setData])
   return (
     <InfoContainer>
       <FormContainer>
+        {console.log(data)}
+        {data.map(e =>
+
+          <p>{e.mail}</p>
+
+        )}
         <FormInput defaultValue={"Nom"} />
         <FormInput defaultValue={"Prénom"} />
         <FormInput defaultValue={"Mail"} />
