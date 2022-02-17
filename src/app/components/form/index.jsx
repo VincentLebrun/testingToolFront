@@ -42,17 +42,13 @@ ${tw`
  
 `}
 `
+const TextBody = styled.div``
+const Text = styled.p``
 
 export function Form() {
   const [data, setData] = useState([])
-
-
-
-
-
-
   useEffect(() => {
-    const apiUrl = "http://localhost:4000/user"
+    const apiUrl = "http://localhost:4000/users"
     axios.get(apiUrl).then(res => {
       const all = res.data;
       setData(all)
@@ -62,11 +58,16 @@ export function Form() {
   }, [setData])
   return (
     <InfoContainer>
-      <FormContainer>
-        {console.log(data)}
-        {data.map(e =>
+      <FormContainer >
 
-          <p>{e.mail}</p>
+        {data.map(e => {
+          return (
+            <TextBody key={'users'} >
+              <Text>{e.firstname}</Text>
+              <Text>{e.mail}</Text>
+
+            </TextBody>)
+        }
 
         )}
         <FormInput defaultValue={"Nom"} />
